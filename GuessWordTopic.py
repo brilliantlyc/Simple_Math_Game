@@ -8,9 +8,8 @@ class GuessWordTopic(Topic):
     animals = ["dog", "cat", "horse", "pig", "cow", "elephant", "bird", "fish", "chicken", "snake",
                "whale", "turtle", "mouse", "butterfly", "bee", "monkey"]
 
-    foods = ["hot dog", "carrots", "ham", "pizza", "cookie", "eggs", "banana"]
-    # "fish", "chicken", "pancakes",
-    #        "sandwich", "apple", "cheese", "bacon", "bread", "ice cream"]
+    foods = ["hot dog", "carrots", "ham", "pizza", "cookie", "eggs", "banana", "fish", "chicken", "pancakes",
+             "sandwich", "apple", "cheese", "bacon", "bread", "ice cream"]
 
     drinks = ["hot chocolate", "carrot juice", "pineapple juice", "milk", "chocolate milk", "egg nog", "water",
               "milkshake", "orange juice", "apple juice",
@@ -21,8 +20,8 @@ class GuessWordTopic(Topic):
                "rain forest", "desert", "magma", "ocean", "electron", "light"]
 
     places = ["South America", "Canada", "New York", "Toronto", "Italy", "Niagara Falls", "USA",
-              "Outer Space", "ISS", "Vancouver",
-              "Barcelona", "London", "Florida", "Kansas", "Baltimore", "Boston"]
+              "Outer Space", "ISS", "Vancouver", "Paris", "Tokyo", "Denmark", "Sweden", 
+              "Barcelona", "London", "Florida", "Kansas", "Baltimore", "Boston", "South Africa"]
 
     all_groups = [animals, foods, drinks, natures, places]
 
