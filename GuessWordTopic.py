@@ -20,7 +20,7 @@ class GuessWordTopic(Topic):
                "rain forest", "desert", "magma", "ocean", "electron", "light"]
 
     places = ["South America", "Canada", "New York", "Toronto", "Italy", "Niagara Falls", "USA",
-              "Outer Space", "ISS", "Vancouver", "Paris"
+              "Outer Space", "ISS", "Vancouver", "Paris", "Tokyo", "Denmark", "Sweden", 
               "Barcelona", "London", "Florida", "Kansas", "Baltimore", "Boston", "South Africa"]
 
     all_groups = [animals, foods, drinks, natures, places]
