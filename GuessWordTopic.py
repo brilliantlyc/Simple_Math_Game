@@ -25,70 +25,28 @@ class GuessWordTopic(Topic):
 
     all_groups = [animals, foods, drinks, natures, places]
 
-    def guess_animal(self):
+    def guess_topic(self, topic_name):
 
-        animal = self.animals[random.randint(1, len(self.animals) - 1)]
-        guess = input("Guess the animal: ")
+        if topic_name == "Animals":
+            topic_word = self.animals[random.randint(1, len(self.animals) - 1)]
+        elif topic_name == "Food":
+            topic_word = self.foods[random.randint(1, len(self.foods) - 1)]
+        elif topic_name == "Drinks":
+            topic_word = self.drinks[random.randint(1, len(self.drinks) - 1)]
+        elif topic_name == "Nature":
+            topic_word = self.natures[random.randint(1, len(self.natures) - 1)]
+        elif topic_name == "Places":
+            topic_word = self.places[random.randint(1, len(self.places) - 1)]
+        
+        guess = input("Guess the " + topic_name + ": ")
         guess_count = 1
-        while guess.lower() != animal and guess_count < 5:
+        while guess.lower() != topic_word and guess_count < 5:
             guess = input("Guess again: ")
             guess_count += 1
-        if guess.lower() != animal:
-            print("\nYou ran out of guesses!" + "\nThe animal was: " + animal + "\n")
+        if guess.lower() != topic_word:
+            print("\nYou ran out of guesses!" + "\nThe " + topic_name + " was: " + topic_word + "\n")
         else:
-            print("\nCongrats, you guessed the animal!\n")
-
-    def guess_food(self):
-
-        food = self.foods[random.randint(1, len(self.foods) - 1)]
-        guess = input("Guess the food: ")
-        guess_count = 1
-        while guess.lower() != food and guess_count < 5:
-            guess = input("Guess again: ")
-            guess_count += 1
-        if guess.lower() != food:
-            print("\nYou ran out of guesses!" + "\nThe food was: " + food + "\n")
-        else:
-            print("\nCongrats, you guessed the food!\n")
-
-    def guess_drink(self):
-
-        drink = self.drinks[random.randint(1, len(self.drinks) - 1)]
-        guess = input("Guess the drink: ")
-        guess_count = 1
-        while guess.lower() != drink and guess_count < 5:
-            guess = input("Guess again: ")
-            guess_count += 1
-        if guess.lower() != drink:
-            print("\nYou ran out of guesses!" + "\nThe drink was: " + drink + "\n")
-        else:
-            print("\nCongrats, you guessed the drink!\n")
-
-    def guess_nature(self):
-
-        nature = self.natures[random.randint(1, len(self.natures) - 1)]
-        guess = input("Guess the nature: ")
-        guess_count = 1
-        while guess.lower() != nature and guess_count < 5:
-            guess = input("Guess again: ")
-            guess_count += 1
-        if guess.lower() != nature:
-            print("\nYou ran out of guesses!" + "\nThe nature was: " + nature + "\n")
-        else:
-            print("\nCongrats, you guessed the nature!\n")
-
-    def guess_place(self):
-
-        place = self.places[random.randint(1, len(self.places) - 1)]
-        guess = input("Guess the place: ")
-        guess_count = 1
-        while guess.lower() != place.lower() and guess_count < 5:
-            guess = input("Guess again: ")
-            guess_count += 1
-        if guess.lower() != place.lower():
-            print("\nYou ran out of guesses!" + "\nThe place was: " + place + "\n")
-        else:
-            print("\nCongrats, you guessed the place!\n")
+            print("\nCongrats, you guessed the " + topic_name + "!\n")
 
     def guess_all_group(self):
 

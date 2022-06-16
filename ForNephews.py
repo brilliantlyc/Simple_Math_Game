@@ -123,18 +123,10 @@ while not exit_game:
                 continue_word_group = True
 
             while continue_word_group:
-                if word_group == "Animals":
-                    myGuessWordTopic.guess_animal()
-                elif word_group == "Food":
-                    myGuessWordTopic.guess_food()
-                elif word_group == "Drinks":
-                    myGuessWordTopic.guess_drink()
-                elif word_group == "Nature":
-                    myGuessWordTopic.guess_nature()
-                elif word_group == "Places":
-                    myGuessWordTopic.guess_place()
-                else:
+                if word_group == "All Groups":
                     myGuessWordTopic.guess_all_group()
+                else:
+                    myGuessWordTopic.guess_topic(word_group)
 
                 continue_word_group = get_continue_choice(word_group)
                 print()
